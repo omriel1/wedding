@@ -2,34 +2,30 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden; /* Prevent scrolling the body */
 }
 
 .map-container {
     position: relative;
-    width: 80%;
-    height: 80;
-    overflow: hidden; /* Hide scrollbars since we’ll be using drag */
-    cursor: grab; /* Change the cursor to indicate draggable content */
-}
-
-.map-container:active {
-    cursor: grabbing;
+    /* width: 100vw; */
+    height: 100vh;
+    cursor: grab; /* Indicate that the map is draggable */
+    overflow: hidden; /* Hide any overflow */
 }
 
 .map-image {
-    width: 100%;
-    height: auto;
-    position: absolute; /* Allow the image to be draggable */
+    position: absolute;
     top: 0;
     left: 0;
+    width: auto;
+    height: 100%; /* Ensure the image takes the full height of the container */
 }
 
 .map-point {
     position: absolute;
     width: 20px;
     height: 20px;
-    background-color: rgba(255, 69, 0, 0.8);
+    background-color: rgba(255, 69, 0, 0.8); /* Transparent and matching the map's colors */
     border-radius: 50%;
     cursor: pointer;
     transition: transform 0.3s;
