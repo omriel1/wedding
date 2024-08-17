@@ -2,19 +2,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: hidden; /* Removed body overflow to allow scrolling within the map container */
 }
 
 .map-container {
     position: relative;
     width: 100%;
     height: 100vh;
+    overflow-y: scroll; /* Enable vertical scrolling */
 }
 
 .map-image {
     width: 100%;
-    height: 100%;
-    object-fit: cover;
+    height: auto; /* Allow the image to grow in height based on its aspect ratio */
 }
 
 .map-point {
